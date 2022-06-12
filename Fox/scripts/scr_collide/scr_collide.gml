@@ -1,33 +1,43 @@
 function scr_collide(){
+	//if !place_meeting(x + hsp,y - 5,obj_solid) && place_meeting(x + hsp,y,obj_solid)
+	//	while place_meeting(x + hsp,y,obj_solid)
+	//		y--
+	
 	if place_meeting(x + hsp,y,obj_solid)
 	{
 		while !place_meeting(x+sign(hsp),y,obj_solid)
 			x += sign(hsp)
 		hsp = 0
 	}
-	x += hsp
+	else
+		x += hsp
 	
 	if place_meeting(x,y + vsp,obj_solid)
 	{
+		if place_meeting(x,y + 1,obj_solid)
+			grounded = 1
+		else
+			grounded = 0
 		while !place_meeting(x,y+sign(vsp),obj_solid)
 			y += sign(vsp)
 		vsp = 0
 	}
-	y += vsp
-	
-	if place_meeting(x,y,obj_slope)
+	else
 	{
-		if instance_place(x+sign(hsp),y,obj_slope)
-		{
-		var slope = instance_place(x+sign(hsp),y,obj_slope)
-		var slopexscale = sign(slope.image_xscale)
-		}
-		while place_meeting(x+sign(hsp),y,obj_slope)
-		{
-			if slopexscale = image_xscale
-				y += -1
-			if slopexscale = -image_xscale
-				y += -1
-		}
+		y += vsp
+		grounded = 0	
+	}
+	
+	while place_meeting(x,y + abs(hsp) + 1,obj_slope) && !place_meeting(x,y + 1,obj_slope)
+	{
+		y += 0.1
+		grounded = 1	
+	}
+	if place_meeting(x,y + 1,obj_slope)
+	{
+		grounded = 1
+		if instance_place(x,y,obj_slope)
+			while place_meeting(x,y,obj_slope)
+				y -= 0.1
 	}
 }

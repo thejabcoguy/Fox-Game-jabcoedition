@@ -1,4 +1,6 @@
 scr_input()
+if state != 999999
+	scr_collide()
 move = k_left + k_right
 depth = -999
 switch state
@@ -53,8 +55,6 @@ switch state
 if state != 3
 invframes -= 0.25
 frames -= 0.1
-if state != 999999
-	scr_collide()
 if state != 10
 	mask_index = spr_player_mask
 else
@@ -65,9 +65,9 @@ if place_meeting(x, y, obj_solid) and state != 2
 	movespeed = 10
 }
 image_xscale = xscale
-if place_meeting(x, (y + 1), obj_slope)
+if place_meeting(x,y + abs(hsp) + 1, obj_slope)
 {
-	var Slope = instance_place(x, (y + 1), obj_slope)
+	var Slope = instance_place(x, (y + abs(hsp) + 1), obj_slope)
 	var SlopeXscale = abs(Slope.image_xscale)
 	 var targetAngle = ((25 / SlopeXscale) * sign(Slope.image_xscale))
 	drawAngle = targetAngle

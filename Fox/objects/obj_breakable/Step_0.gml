@@ -1,4 +1,4 @@
-if (place_meeting(x+1,y,obj_player) or place_meeting(x-1,y,obj_player)) and (obj_player.state = 1 or obj_player.state = 5 or obj_player.state = 9 or obj_player.state = 10)
+if distance_to_object(obj_player) < 10 and (obj_player.state = 1 or obj_player.state = 5 or obj_player.state = 9 or obj_player.state = 10)
 {
 	instance_destroy()
 	/*with obj_player
