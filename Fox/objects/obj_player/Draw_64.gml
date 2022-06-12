@@ -1,4 +1,4 @@
-if room != Hub and room != Title
+if global.drawhud
 {
 	draw_set_font(collect_font)
 	collectstring = (string("SCORE X ") + string(global.collect))
