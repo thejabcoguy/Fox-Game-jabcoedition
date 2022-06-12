@@ -30,3 +30,7 @@ chainsaw = 0
 rgb = make_color_rgb(150,150,150)
 frames = -1
 frozenhit = 0
+combotextoffset = -500
+combotextoffset_target = -500
+
+collect_font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890", true, 2);

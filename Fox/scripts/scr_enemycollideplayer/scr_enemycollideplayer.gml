@@ -23,7 +23,7 @@ function scr_enemycollideplayer(){
 			global.combo += 1
 			stuncombo += 1
 			combostop = 30
-			combotime = 120
+			combotime = 100
 			image_index = random_range(0,3)
 			chainsaw = 0
 			}
@@ -40,7 +40,7 @@ function scr_enemycollideplayer(){
 			global.combo += 1
 			stuncombo += 1
 			combostop = 30
-			combotime = 120
+			combotime = 100
 			//image_index = random_range(0,3)
 			chainsaw = 1
 			}
@@ -87,7 +87,7 @@ function scr_enemycollideplayer(){
 			global.combo += 1
 			stuncombo += 1
 			combostop = 30
-			combotime = 120
+			combotime = 100
 		}
 		sound(sfx_enemyhit)
 		sound(sfx_punch)
@@ -107,7 +107,7 @@ function scr_enemycollideplayer(){
 			global.combo += 1
 			stuncombo += 1
 			combostop = 30
-			combotime = 120
+			combotime = 100
 		}
 		sound(sfx_enemyhit)
 		sound(sfx_punch)

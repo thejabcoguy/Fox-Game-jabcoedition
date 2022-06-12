@@ -23,6 +23,6 @@ startx = x
 if state = 8
 	state = 0
 if global.combo > 0
-combotime = 120
+//combotime = 100
 if combostop < 15
 	combostop = 15

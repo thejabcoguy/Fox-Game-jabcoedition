@@ -60,7 +60,7 @@ function scr_player_attackhit(){
 		global.combo += 1
 		stuncombo += 1
 		combostop = 30
-		combotime = 120
+		combotime = 100
 		image_index = random_range(0,3)
 	}*/
 }

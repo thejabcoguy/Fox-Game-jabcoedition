@@ -95,7 +95,7 @@ if global.combo > 0
 		global.combo = 0
 }
 if combotime > 120
-	combotime = 120
+	combotime = 100
 if state != 5
 	runstop = 0
 //with all
