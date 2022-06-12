@@ -32,5 +32,7 @@ frames = -1
 frozenhit = 0
 combotextoffset = -500
 combotextoffset_target = -500
+combosintime = 0
+combosin = 0
 
 collect_font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890", true, 2);

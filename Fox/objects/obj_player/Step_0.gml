@@ -138,3 +138,8 @@ if state != 12
 	frozenhit = 0
 if room = Hub or room = Title
 	global.collect = 0
+	
+combosintime++
+if combosintime > 2700 //180 * 15, sin repeats at 180, with a 15x damper - wrapped to prevent overflow
+	combosin -= 2700
+combosin = sin(combosintime / 15) * 5

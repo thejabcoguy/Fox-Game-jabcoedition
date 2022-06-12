@@ -21,7 +21,7 @@ if room != Hub and room != Title
 		else
 			combotextoffset_target = -500
 		combotextoffset = lerp(combotextoffset,combotextoffset_target,0.1)
-		draw_text(20 + comboshakew + combotextoffset,70 + comboshakeh,combostring)
-		draw_healthbar(30 + string_width(combostring) + comboshakew + combotextoffset,65 + comboshakeh,180 + string_width(combostring) + comboshakew + combotextoffset,75 + comboshakeh,combotime,c_black,c_white,c_white,0,1,1)
+		draw_text(20 + comboshakew + combotextoffset + combosin,70 + comboshakeh,combostring)
+		draw_healthbar(30 + string_width(combostring) + comboshakew + combotextoffset + combosin,65 + comboshakeh,180 + string_width(combostring) + comboshakew + combotextoffset + combosin,75 + comboshakeh,combotime,c_black,c_white,c_white,0,1,1)
 		
 }
